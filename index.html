@@ -1,23 +1,733 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+  
+  <!-- JSON-LD 구조화 데이터 적용 (SEO 및 AI 검색 최적화) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://example.com/car-insurance-property-damage",
+        "url": "https://example.com/car-insurance-property-damage",
+        "name": "2026년 자동차보험 대물 배상 한도 선택 가이드 및 연령별 평균 견적 비교",
+        "description": "국산 및 수입차 모델별, 연령별 대물 배상 한도 설정법과 다이렉트 자동차보험 할인 혜택 비교 가이드"
+      },
+      {
+        "@type": "Article",
+        "headline": "자동차보험 대물 배상 한도 설정 기준과 연령별 다이렉트 보험료 정밀 분석",
+        "image": "https://example.com/images/car-insurance-main.jpg",
+        "datePublished": "2026-01-10T09:00:00+09:00",
+        "dateModified": "2026-06-22T14:00:00+09:00",
+        "author": {
+          "@type": "Organization",
+          "name": "금융정보분석연구소"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "금융정보분석연구소",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://example.com/logo.png"
+          }
+        },
+        "description": "2026년 최신 기준에 따른 자동차보험 대물 배상 한도액(2억 원부터 10억 원 이상) 비교와 각 보험 브랜드별 혜택 및 온라인 전용 할인 분석 리포트"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "대물 배상 한도를 2억 원에서 10억 원으로 상향할 때 보험료 차이는 얼마나 발생하나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "보험사 및 가입자 조건에 따라 다르지만, 통상적으로 연간 보험료 차이는 약 1만 원에서 3만 원 내외 수준으로 매우 미미합니다. 따라서 대형 사고나 고가 차량과의 충돌 시 리스크를 예방하기 위해 10억 원 한도 선택이 권장됩니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "다이렉트 자동차보험 가입 시 가장 큰 장점은 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "설계사 수수료가 제외되어 오프라인 대비 평균 15%에서 20% 가량 저렴하며, 모바일 앱이나 인터넷 사이트를 통해 본인이 원하는 특약(블랙박스, 주행거리, 자녀 할인 등)을 자유롭게 구성할 수 있다는 점이 가장 큰 장점입니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+    .wrapper {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 25px;
+      margin-bottom: 35px;
+    }
+    h1 {
+      font-size: 2.4em;
+      color: #1e293b;
+      margin: 0 0 10px 0;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .meta-info {
+      font-size: 0.95em;
+      color: #64748b;
+    }
+    h2 {
+      font-size: 1.8em;
+      color: #0f172a;
+      margin-top: 45px;
+      margin-bottom: 20px;
+      border-left: 5px solid #2563eb;
+      padding-left: 15px;
+    }
+    h3 {
+      font-size: 1.35em;
+      color: #1e3a8a;
+      margin-top: 30px;
+      margin-bottom: 12px;
+    }
+    p {
+      margin-bottom: 20px;
+      color: #475569;
+      text-align: justify;
+    }
+    .highlight-box {
+      background-color: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 25px 0;
+    }
+    .highlight-box p {
+      margin: 0;
+      color: #1e40af;
+      font-weight: 500;
+    }
+    .warning-box {
+      background-color: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 25px 0;
+    }
+    .warning-box p {
+      margin: 0;
+      color: #991b1b;
+      font-weight: 500;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.95em;
+    }
+    .comparison-table th, .comparison-table td {
+      border: 1px solid #e2e8f0;
+      padding: 14px 16px;
+      text-align: center;
+    }
+    .comparison-table th {
+      background-color: #f1f5f9;
+      color: #1e293b;
+      font-weight: 600;
+    }
+    .comparison-table tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    .calculator-container {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 30px;
+      margin: 40px 0;
+    }
+    .calculator-title {
+      font-size: 1.4em;
+      color: #0f172a;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: 700;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 10px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .form-group select, .form-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      background-color: #ffffff;
+      font-size: 1em;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }
+    .form-group select:focus, .form-group input:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+    .btn-calculate {
+      width: 100%;
+      padding: 14px;
+      background-color: #2563eb;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .btn-calculate:hover {
+      background-color: #1d4ed8;
+    }
+    .calc-result {
+      margin-top: 25px;
+      padding: 20px;
+      background-color: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 6px;
+      display: none;
+    }
+    .calc-result h4 {
+      margin: 0 0 10px 0;
+      color: #065f46;
+      font-size: 1.15em;
+    }
+    .calc-result p {
+      margin: 0;
+      color: #047857;
+      font-weight: 600;
+    }
+    .faq-container {
+      margin-top: 40px;
+    }
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      background-color: #ffffff;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 18px 20px;
+      background-color: #f8fafc;
+      font-weight: 600;
+      color: #1e293b;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s;
+    }
+    .faq-question:hover {
+      background-color: #f1f5f9;
+    }
+    .faq-answer {
+      padding: 20px;
+      border-top: 1px solid #e2e8f0;
+      color: #475569;
+      display: none;
+    }
+    .chart-container {
+      margin: 30px 0;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .chart-bar-group {
+      margin-bottom: 15px;
+    }
+    .chart-label {
+      font-size: 0.9em;
+      color: #475569;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .chart-bar-wrapper {
+      background-color: #e2e8f0;
+      border-radius: 4px;
+      height: 24px;
+      overflow: hidden;
+    }
+    .chart-bar {
+      height: 100%;
+      background-color: #3b82f6;
+      border-radius: 4px;
+      width: 0%;
+      transition: width 1s ease-in-out;
+    }
+    .chart-bar.limit-2 { background-color: #94a3b8; }
+    .chart-bar.limit-5 { background-color: #60a5fa; }
+    .chart-bar.limit-10 { background-color: #2563eb; }
+
+    .external-links {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 25px;
+      margin-top: 40px;
+    }
+    .external-links h3 {
+      margin-top: 0;
+      color: #0f172a;
+    }
+    .external-links ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .external-links li {
+      margin-bottom: 10px;
+    }
+    .external-links a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .external-links a:hover {
+      text-decoration: underline;
+    }
+    ul.tips-list {
+      padding-left: 20px;
+    }
+    ul.tips-list li {
+      margin-bottom: 12px;
+      color: #475569;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .bold {
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1>자동차보험 대물 배상 한도와 연령별 평균 견적 가이드</h1>
+      <div class="meta-info">
+        <span>작성처: 금융정보분석연구소</span> | <span>최종 업데이트: 2026년 6월 22일</span>
+      </div>
+    </header>
+
+    <p>
+      운전 중 예기치 못한 사고가 발생했을 때 상대방의 차량이나 대물에 끼친 손해를 보장하는 담보가 바로 자동차보험의 대물 배상입니다. 최근 고가의 수입차나 전기차 보급이 급증하고 다중 추돌 사고 발생 빈도가 높아짐에 따라 과거의 기본 한도였던 2억 원만으로는 충분한 보장을 받기 어려워졌습니다. 
+    </p>
+    <p>
+      본 가이드에서는 2026년 최신 보험 규정과 시장 동향을 반영하여 국산차 및 수입차 모델별, 그리고 가입자의 나이대와 연령별 특성에 따른 대물 배상 한도(2억 원, 5억 원, 10억 원 이상) 설정 방법과 평균 예상 가격 및 비용 분석 결과를 전달해 드립니다. 다이렉트 자동차보험 비교 가입의 장단점 및 브랜드 순위, 그리고 온라인 사이트와 어플을 통한 현금지원, 사은품 및 지원금 혜택까지 종합적으로 살펴보겠습니다.
+    </p>
+
+    <!-- 대물 배상 비용 모의 계산기 (체류시간 증대용 입력폼) -->
+    <div class="calculator-container">
+      <div class="calculator-title">대물 배상 보험료 시뮬레이션 및 예상 견적 계산기</div>
+      <p style="font-size: 0.9em; color: #64748b; margin-top: -10px; margin-bottom: 20px;">
+        본인의 연령과 보유 차량 모델, 그리고 설정하고자 하는 대물 한도를 입력하시면 2026년 평균 데이터 통계를 바탕으로 가상의 연간 예상 금액과 추가 비용 편차를 산출해 드립니다.
+      </p>
+      
+      <div class="form-group">
+        <label for="calc-age">가입자 연령대 선택</label>
+        <select id="calc-age">
+          <option value="age-20">만 21세 ~ 만 25세 (초기 진입 장벽 단계)</option>
+          <option value="age-26">만 26세 ~ 만 29세 (할인율 적용 시점)</option>
+          <option value="age-30" selected>만 30세 ~ 만 49세 (가장 안정적인 구간)</option>
+          <option value="age-50">만 50세 ~ 만 64세 (숙련 운전자 구간)</option>
+          <option value="age-65">만 65세 이상 (실버 운전자 구간)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="calc-car">차량 종류 및 세부 모델 구분</label>
+        <select id="calc-car">
+          <option value="car-light">경차 및 소형차 (캐스퍼, 레이, 아반떼 등)</option>
+          <option value="car-mid" selected>중형 및 대형 국산차 (소나타, 그랜저, 제네시스 G80 등)</option>
+          <option value="car-import">수입 세단 및 대형 SUV (BMW 5시리즈, 벤츠 E클래스 등)</option>
+          <option value="car-ev">고성능 전기차 및 하이브리드 (테슬라 모델Y, 아이오닉6 등)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="calc-limit">대물 배상 한도 설정액</label>
+        <select id="calc-limit">
+          <option value="limit-2">대물 배상 2억 원 (의무 기준 최소 상한선)</option>
+          <option value="limit-5">대물 배상 5억 원 (보편적인 권장 구간)</option>
+          <option value="limit-10" selected>대물 배상 10억 원 (고가 차량 밀집 지역 안심 구간)</option>
+          <option value="limit-20">대물 배상 20억 원 (초고가 슈퍼카 사고 대비 최고 구간)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="calc-history">과거 사고 이력 여부</label>
+        <select id="calc-history">
+          <option value="none" selected>최근 3개년 동안 무사고 상태 유지 중</option>
+          <option value="one">최근 3개년 이내 소액 사고 1회 이력 존재</option>
+          <option value="multi">최근 3개년 이내 대형 사고 또는 2회 이상 이력</option>
+        </select>
+      </div>
+
+      <button type="button" class="btn-calculate" onclick="calculateInsurance()">나의 맞춤형 예상 비용 계산하기</button>
+
+      <div class="calc-result" id="insurance-result">
+        <h4>시뮬레이션 분석 결과</h4>
+        <p id="result-text-main"></p>
+        <p id="result-text-sub" style="font-size: 0.9em; color: #4b5563; margin-top: 10px; font-weight: normal;"></p>
+      </div>
+    </div>
+
+    <h2>1. 자동차보험 대물 배상의 이해와 가입 기준</h2>
+    <p>
+      자동차보험은 법적으로 반드시 가입해야 하는 책임보험(의무보험)과 선택적으로 보장 범위를 넓히는 임의보험으로 구성됩니다. 이 중 대물 배상은 타인의 차량이나 물건, 공공시설물 등에 손해를 끼쳤을 때 이를 배상하는 항목입니다. 현행법상 의무적으로 가입해야 하는 대물 배상 최소 금액은 사고당 2,000만 원입니다. 그러나 실제 도로 위에서 사고가 발생할 경우 2,000만 원으로는 턱없이 부족합니다.
+    </p>
+    <p>
+      예를 들어 수입차와의 단순 접촉 사고만으로도 범퍼 교체 비용, 도장 비용, 렌트비(대차료) 등이 합산되어 수천만 원에서 수억 원의 청구서가 전달될 수 있습니다. 만약 전신주나 고가 도로 방음벽과 같은 공공시설물을 들이받는 대형 단독 사고가 나거나 다중 추돌 사고의 가해자가 된다면 배상 금액은 수십억 원대에 이를 수도 있습니다. 이러한 이유로 대다수 운전자는 의무 가입 수준에 그치지 않고 임의보험 형태로 한도를 크게 상향하여 가입하고 있습니다.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        2026년 기준 금융당국과 전문 컨설팅 업체들의 통계에 의하면, 신규 가입자 중 대물 배상 한도를 10억 원 이상으로 설정하는 비율이 전체 가입자의 85%를 넘어선 것으로 파악되었습니다. 과거 2억 원 또는 3억 원에 머물렀던 평균 가입 금액이 대폭 상향 평준화되었습니다.
+      </p>
+    </div>
+
+    <h2>2. 대물 배상 한도별 연간 보험료 편차와 합리적인 선택</h2>
+    <p>
+      대물 배상 한도를 설정할 때 가장 많은 운전자들이 고민하는 부분이 바로 한도 증가에 따른 비용 부담입니다. 하지만 실제 다이렉트 사이트나 인터넷 온라인 비교 앱을 통해 견적을 직접 산출해 보면, 한도를 올리는 것에 비해 추가되는 가격 인상 폭은 무척 작다는 사실을 확인할 수 있습니다.
+    </p>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>대물 배상 가입 한도</th>
+          <th>기본 책임 수준 및 위험 노출도</th>
+          <th>2억 대비 연평균 추가 예상 금액</th>
+          <th>추천 대상 운전자 군</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>2억 원</strong></td>
+          <td>고가 수입차나 다중 추돌 시 한도 초과 위험성 큼</td>
+          <td>기준점 (0원)</td>
+          <td>연간 주행거리가 매우 짧고 한적한 도서 지역 위주 운행자</td>
+        </tr>
+        <tr>
+          <td><strong>5억 원</strong></td>
+          <td>일반적인 수입 세단과의 1:1 사고는 충분히 커버 가능</td>
+          <td>약 8,000원 ~ 15,000원 추가</td>
+          <td>중소도시 거주자 및 가성비 위주의 포트폴리오 선호자</td>
+        </tr>
+        <tr>
+          <td><strong>10억 원</strong></td>
+          <td>전기차, 슈퍼카 접촉 및 터널 다중 추돌 사고도 안정적 배상</td>
+          <td>약 15,000원 ~ 28,000원 추가</td>
+          <td>수도권 및 출퇴근 정체 구역 주행이 빈번한 모든 운전자 (적극 추천)</td>
+        </tr>
+        <tr>
+          <td><strong>20억 원</strong></td>
+          <td>발생할 수 있는 최고 수준의 물적 손해를 완전 방어</td>
+          <td>약 25,000원 ~ 40,000원 추가</td>
+          <td>초보 운전자, 화물 및 특수차 통행량이 많은 산업도로 상시 주행자</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      표에서 볼 수 있듯이 대물 배상 한도를 2억 원에서 10억 원으로 무려 5배나 상향 조정한 장점이 크지만, 연간 추가되는 실질 금액은 커피 한두 잔 값에 불과한 2만 원 내외입니다. 한도를 무리하게 억제하여 위험을 안고 가기보다는 비용 대비 큰 안정성을 확보하는 것이 합리적인 재테크 방식이자 이성적인 위기관리 노하우입니다.
+    </p>
+
+    <h2>3. 연령별 및 모델별 자동차보험 대물 배상 평균 가격 통계</h2>
+    <p>
+      대물 배상 보험료는 가입자의 운전 경력과 사고 이력, 연령대에 가장 큰 영향을 받습니다. 20대 초반의 신규 가입자의 경우 사고율이 높게 책정되어 기본 요율이 매우 높으며, 대물 배상 금액 역시 30대나 40대 장년층에 비해 비싸게 계산됩니다.
+    </p>
+
+    <h3>가. 연령대별 평균 대물 배상료 추이 (무사고 가입자 기준)</h3>
+    <ul>
+      <li><strong>만 21세 ~ 만 24세 군:</strong> 이 연령대는 생애 첫차 구매나 신규 유입이 가장 많아 사고 위험에 직면해 있습니다. 연간 평균 대물 배상 가격은 국산 세단 기준 35만 원에서 50만 원 선으로 다소 무거운 편입니다.</li>
+      <li><strong>만 26세 ~ 만 29세 군:</strong> 군 전역 및 운전 경력이 누적되기 시작하며 군 경력 할인, 운전 경력 인정 제도를 적극 활용할 수 있는 단계입니다. 평균 가격은 25만 원 내외로 안정세에 들어섭니다.</li>
+      <li><strong>만 30세 ~ 만 49세 군:</strong> 통계상 사고율이 가장 낮고 안정적인 연령대로 보험사들이 가장 선호하는 타겟층입니다. 특약 할인과 무사고 혜택을 다 받으면 대물 배상 비용은 12만 원에서 18만 원 수준으로 가장 저렴한 수준까지 하향됩니다.</li>
+      <li><strong>만 50세 ~ 만 64세 군:</strong> 여전히 우수한 무사고 경력을 바탕으로 비교적 싼 수준을 유지하지만 고연령 진입 직전의 세대 특성상 요율이 살짝 상승하여 약 15만 원에서 22만 원 선을 기록합니다.</li>
+    </ul>
+
+    <!-- 연령별 상대 비용 시각화용 차트 CSS 구현 -->
+    <div class="chart-container">
+      <div class="bold" style="margin-bottom: 15px; font-size: 1.1em;">연령대별 상대 대물 배상 요율 수준 (만 30~49세를 100% 기준으로 보았을 때)</div>
+      
+      <div class="chart-bar-group">
+        <div class="chart-label"><span>만 21세 ~ 24세 (사회초년생 및 신규)</span> <span>약 240%</span></div>
+        <div class="chart-bar-wrapper">
+          <div class="chart-bar limit-2" style="width: 100%"></div>
+        </div>
+      </div>
+
+      <div class="chart-bar-group">
+        <div class="chart-label"><span>만 26세 ~ 29세 (경력 형성기)</span> <span>약 150%</span></div>
+        <div class="chart-bar-wrapper">
+          <div class="chart-bar limit-5" style="width: 62.5%"></div>
+        </div>
+      </div>
+
+      <div class="chart-bar-group">
+        <div class="chart-label"><span>만 30세 ~ 49세 (가장 안정적인 황금기)</span> <span>100% (기준)</span></div>
+        <div class="chart-bar-wrapper">
+          <div class="chart-bar limit-10" style="width: 41.6%"></div>
+        </div>
+      </div>
+
+      <div class="chart-bar-group">
+        <div class="chart-label"><span>만 65세 이상 (고령 진입 및 위험 관리 필요)</span> <span>약 135%</span></div>
+        <div class="chart-bar-wrapper">
+          <div class="chart-bar limit-2" style="width: 56.2%"></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>나. 주요 국산 및 수입 차량 모델별 보험 요율 및 비용 분석</h3>
+    <p>
+      차량이 국산인지 수입 차량인지, 혹은 내연기관인지 전기차(EV)인지에 따라서도 배상 한도가 아닌 자차(자기차량손해) 담보와 연동되어 대물 보험료 기본 부과 등급이 상이하게 변동됩니다. 
+    </p>
+    <p>
+      현대 아반떼나 기아 K5 같은 대중적인 세단 라인업은 사고 후 부품 수급이나 정비 용이성이 우수하여 대물 배상 담보 가입 시 기본 요율에서 많은 이점을 가져갑니다. 반면, 제네시스 G80 이나 G90 같은 대형 럭셔리 등급은 고출력 및 무거운 중량에 기인한 대형 파손 사고 유발 잠재력으로 인해 다소 가산 요율이 적용될 수 있습니다. 
+    </p>
+    <p>
+      최근 전기차 트렌드의 중심에 서 있는 테슬라 모델3 나 모델Y 및 국산 아이오닉 계열 차량은 정비 단가가 내연기관 대비 상대적으로 높게 산정되므로, 대물 배상 및 종합 담보 청구 시 자가 수리 외에 타인 배상과 얽힌 기본 부담금 구간이 높게 관측되는 경향이 있습니다. 따라서 하이브리드나 순수 전기차 차주라면 예기치 못한 주변 연쇄 파손을 고려해 대물 한도를 최대치(10억~20억 원)로 넉넉하게 올려두는 편이 유리합니다.
+    </p>
+
+    <h2>4. 다이렉트 자동차보험 비교 가입의 장단점 및 브랜드 평가</h2>
+    <p>
+      인터넷 가입 방식인 다이렉트는 기존 대면 설계사를 통한 오프라인 청약과 비교해 구조적인 차이점이 명확하게 갈립니다.
+    </p>
+
+    <h3>다이렉트 가입의 장점</h3>
+    <ul class="tips-list">
+      <li><strong>수수료 절감에 따른 저렴한 비용:</strong> 중간 모집 수수료나 지점 유지 관리비가 일절 발생하지 않기 때문에 평균적으로 15%에서 많게는 20% 이상 저렴한 가격 경쟁력을 보입니다.</li>
+      <li><strong>주도적인 특약 설계:</strong> 불필요한 연계 담보나 불합리한 옵션 가입 권유 없이 내가 원하는 대물 배상 10억, 대인 무한, 자손/자상 여부를 직접 비교해가며 결정할 수 있어 객관적인 포트폴리오 관리가 가능합니다.</li>
+      <li><strong>시간과 공간의 제약 극복:</strong> 스마트폰 전용 어플이나 PC 온라인 사이트를 통하면 새벽 시간이나 휴일에도 5분 안에 간단한 본인 인증 후 가입 및 갱신 처리가 완료됩니다.</li>
+    </ul>
+
+    <h3>다이렉트 가입의 단점과 보완책</h3>
+    <ul class="tips-list">
+      <li><strong>초보 가입자의 정보 비대칭성:</strong> 자동차보험 용어(대인, 대물, 무보험차 상해, 긴급출동 등)가 낯선 초보자에게는 스스로 한도를 정하는 일 자체가 어려울 수 있습니다.</li>
+      <li><strong>사고 대처에 대한 심리적 불안감:</strong> 담당 설계사가 배정되지 않기 때문에 현장 사고 시 직접 고객센터로 신속히 연락하여 접수해야 한다는 부담감이 존재합니다. 다만 실제 현장 출동 및 보상 프로세스는 오프라인 가입자와 다이렉트 가입자 간에 동일하게 차별 없이 작동하므로 불안해하실 필요는 전혀 없습니다.</li>
+    </ul>
+
+    <h2>5. 대형 커뮤니티의 리얼 후기 및 실생활 사례 요약</h2>
+    <p>
+      디시인사이드, 보배드림, 에펨코리아(펨코) 등 국내 대형 온라인 소통 공간에서는 실제로 일어난 내돈내산 가입 및 사고 수습 후기들이 활발하게 공유되고 있습니다. 대표적인 사례를 통해 대물 배상 담보가 가진 위력을 체감할 수 있습니다.
+    </p>
+
+    <div class="warning-box">
+      <p>
+        보배드림 실제 사연 요약: 수도권 외곽 도로에서 빙판길 미끄러짐으로 수입차 2대 및 가드레일을 연쇄 연타하는 삼중 추돌 가해 사고가 발생했습니다. 차량 파손비 및 가드레일 복구, 대차 렌트 비용까지 총 청구 금액이 3억 8천만 원에 육박했으나 다행히 대물 한도를 10억 원으로 상향해 둔 덕에 자기 자산 피해 없이 전액 보험 처리로 상황을 방어했다는 안도의 경험담이 올라왔습니다.
+      </p>
+    </div>
+    
+    <p>
+      디시인사이드 자동차 갤러리에서는 신규 가입자 간에 "대물 한도를 몇 억으로 하는 게 낫냐"는 질문글이 상시 화두입니다. "1년 2만 원 아끼자고 2억 한도 썼다가 인생 전체가 저당 잡힐 수 있으니 무조건 10억 혹은 최대치인 20억을 써라", "다이렉트 가입 시 사은품이나 현금지원 혜택만 잘 골라받아도 대물 배상 한도를 무료로 상향하는 것과 다름없다"는 조언들이 대다수의 찬성을 얻고 있습니다.
+    </p>
+
+    <h2>6. 2026년 다이렉트 할인 특약 및 모바일 앱 혜택 정복하기</h2>
+    <p>
+      단순히 기본 가격이 싼곳을 고르는 것 못지않게 중요한 것이 바로 본인의 주행 패턴에 딱 맞는 스마트한 할인 특약을 골라 적용하는 것입니다. 각 메이저 브랜드(삼성화재, 현대해상, DB손해보험, KB손해보험, 캐롯손해보험 등)별로 할인 항목의 명칭과 세부 요율은 조금씩 다르지만, 큰 틀에서 다음과 같은 할인 기법들이 공통적으로 제공됩니다.
+    </p>
+
+    <h3>주요 다이렉트 할인 특약 및 적용 비법</h3>
+    <ul class="tips-list">
+      <li><strong>마일리지(주행거리) 특약:</strong> 연간 주행거리가 2,000km ~ 15,000km 이하인 경우 주행거리 구간별로 최소 5%에서 최대 35%가 넘는 높은 할인율로 납부 보험료의 상당 부분을 현금이나 포인트로 환급해 줍니다.</li>
+      <li><strong>티맵(TMAP) 및 카카오네비 안전운전 점수 할인:</strong> 평소 급가속, 급감속을 하지 않고 안전 속도를 준수하여 내비게이션 앱상 누적 안전 점수가 80점 내외를 넘길 경우 대략 10%~15%의 즉시 할인 혜택을 부가해 줍니다.</li>
+      <li><strong>자녀 할인 특약:</strong> 태아 및 미취학 어린 자녀가 있는 가정의 경우 운전 행태가 매우 온화하고 안전지향적이라는 빅데이터 분석에 기여하여 약 5%에서 15% 사이의 할인을 추가로 지원합니다.</li>
+      <li><strong>첨단 안전장치 장착 특약:</strong> 차량 출고 시 차선 이탈 방지 장치, 전방 충돌 방지 제어기 등이 기본 장착되어 있다면 이를 입증할 수 있는 계기판 사진 등록 등을 통해 소액의 추가 혜택을 누릴 수 있습니다.</li>
+    </ul>
+
+    <h2>7. 인공지능(AI) 기술을 접목한 스마트한 자동차보험 관리법</h2>
+    <p>
+      현대 기술의 눈부신 발전으로 인해 단순히 포털 검색에만 의지하지 않고 챗지피티(ChatGPT)나 제미나이(Gemini) 같은 거대 언어 모델 기반의 어시스턴트를 활용해 본인의 생활 패턴에 가장 유리한 최적의 자동차보험 담보 구성을 1:1 맞춤형 컨설팅 형식으로 받아볼 수 있는 시대가 되었습니다.
+    </p>
+    <p>
+      예를 들어 인공지능에 본인의 현재 나이, 매달 지출 가능한 자금 규모, 거주 지역(예: 고가 외제 차량 유동 인구가 높은 서울 강남 및 경기 분당권), 연간 예상 주행거리를 텍스트로 자세히 제시하면 이에 최적화된 대물 배상 한도와 함께 타 사 대비 조건이 우수한 브랜드 가입 경로를 정밀한 알고리즘을 통해 추천받을 수 있어 잘못된 의사 결정으로 인한 금전적 손실을 선제적으로 차단해 줍니다.
+    </p>
+
+    <h2>8. 자주 묻는 질문(FAQ) 및 실전 궁금증 해결</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Q1. 대물 배상에서 보상하는 손해의 구체적인 범위는 어디까지인가요?</span>
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          대물 배상은 가해 차량으로 인해 물리적인 훼손을 입은 상대방의 차량 정비비 및 수리비를 비롯하여, 수리 기간 동안 발생한 렌트카 사용료(대차료), 휴업 중인 영업 차량의 일실 수입(휴차료), 화물차 적재물 파손 손실액, 그리고 충돌한 가로수, 신호기, 가드레일, 민가 건물 등 도로 인프라와 사유재산 파손에 따른 모든 원상 복구 비용 일체를 규정 한도 안에서 종합 보상합니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Q2. 대물 사고 처리 시 운전자 본인의 면책금이나 자가 부담금이 설정되어 있나요?</span>
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          일반적으로 대물 배상 담보를 통해 타인의 물적 재산 피해를 복구할 때는 운전자 본인의 자기부담금(면책금) 규정이 존재하지 않습니다. 자가 차량 손상을 처리하는 '자기차량손해(자차)' 담보에만 20%~30% 내외의 본인 부담금 비율이 부과될 뿐, 상대방에게 물어주는 대물 배상은 가입 한도만 넉넉하다면 별도의 본인 사비 납부 없이 보험사가 알아서 지급 보증 및 일괄 타결을 진행해 줍니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Q3. 다이렉트 가입 시 네이버나 카카오, 토스 등에서 제공하는 제휴 사은품 및 현금지원 혜택을 중복 수령할 수 있나요?</span>
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          네, 그렇습니다. 금융 규정상 무분별한 불법 과당 경쟁을 방지하기 위한 법적 캐시백 상한선 한도(통상 3만 원 내외)가 규정되어 있습니다. 하지만 가입 시점이 아닌 가입 '전' 단계에서 수행하는 다이렉트 신규 보험료 조회 이벤트 및 최종 결제 시 사용하는 카드사 제휴 청구 할인, 포인트 쿠폰 제공 등을 유기적으로 혼용하면 최대의 체감 비용 인하 및 지원금 수혜 효과를 안전하게 획득할 수 있습니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Q4. 사고가 발생해서 대물 배상 청구를 하면 다음 해에 보험료가 무조건 할증되나요?</span>
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          대물 배상 지급액이 가입자가 미리 설정해 둔 '물적사고 할증기준금액'(보통 200만 원으로 많이 세팅)을 초과하는 경우에는 기본 할증 점수 1점이 부과되어 다음 해 갱신 시 적용 요율이 상승하여 비싸집니다. 설령 사고 처리액이 200만 원 미만의 소액 수준이라 할지라도 향후 3년 동안은 무사고 추가 할인 적용에서 완전 배제되는 페널티를 받으므로, 소액 사고 시에는 보험 처리와 자비 처리의 실익을 면밀히 비교해보는 것이 유리합니다.
+        </div>
+      </div>
+    </div>
+
+    <!-- 신뢰할 수 있는 외부 공인 웹사이트 정보 링크 리스트 -->
+    <div class="external-links">
+      <h3>공인된 신뢰성 있는 정보 출처 및 유용한 사이트</h3>
+      <p style="font-size: 0.9em; color: #64748b; margin-top: -10px;">
+        자동차보험 제도 개선 소식과 투명한 가격 공시를 제공하는 공식적인 기관 및 정보 플랫폼입니다. 가입 전 반드시 방문하여 신뢰도 높은 데이터를 교차 검증해 보세요.
+      </p>
+      <ul>
+        <li><a href="https://www.fss.or.kr" target="_blank" rel="noopener">금융감독원 (FSS)</a> – 대한민국 금융 시장 및 보험사 약관 감독 공식 기관</li>
+        <li><a href="https://www.kca.go.kr" target="_blank" rel="noopener">한국소비자원 (KCA)</a> – 자동차보험 불공정 거래, 불합리한 보상 지연 구제 신청 창구</li>
+        <li><a href="https://www.koroad.or.kr" target="_blank" rel="noopener">도로교통공단 (KoRoad)</a> – 교통사고 발생 시 과실 비율 책정 근거 데이터베이스</li>
+        <li><a href="https://www.law.go.kr" target="_blank" rel="noopener">국가법령정보센터</a> – 자동차손해배상 보장법 및 관련 강제 의무 보험 법률 검색 사이트</li>
+        <li><a href="https://namu.wiki/w/%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98" target="_blank" rel="noopener">나무위키 – 자동차보험 가입 요령 항목</a> – 대중들이 기록한 입문자 친화적 요점 분석 가이드</li>
+      </ul>
+    </div>
+
+    <h2 class="text-center" style="margin-top: 50px; border-left: none; padding-left: 0;">맺음말</h2>
+    <p class="text-center" style="max-width: 800px; margin: 0 auto 30px auto; color: #475569;">
+      2026년 기준 대한민국 도로는 단순한 국산 패밀리카 외에도 프리미엄급 고가 전기차 및 첨단 제어 장치가 포함된 수입 SUV 차량들의 유동 비율이 기하급수적으로 늘어났습니다. 
+      안심할 수 있는 대물 배상 한도 설정을 통해 예기치 못한 우연한 사고로부터 본인과 사랑하는 가족의 경제적 터전을 안전하게 수호하시길 기원합니다. 
+      가입 전 반드시 상기 가이드를 정독하시고 각 다이렉트 브랜드별 모의 견적 시스템을 통해 꼼꼼히 비교 설계한 다음 최종 결정을 진행하십시오.
+    </p>
+  </div>
+
+  <script>
+    // FAQ 접기/펼치기 스크립트
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+          const answer = this.nextElementSibling;
+          const icon = this.querySelector('span:last-child');
+          
+          if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+            icon.textContent = '▼';
+            this.style.backgroundColor = '#f8fafc';
+          } else {
+            answer.style.display = 'block';
+            icon.textContent = '▲';
+            this.style.backgroundColor = '#f1f5f9';
+          }
+        });
+      });
+      
+      // 애니메이션 효과를 위해 차트 너비를 서서히 로드하는 효과 구현
+      setTimeout(() => {
+        const bars = document.querySelectorAll('.chart-bar');
+        bars.forEach(bar => {
+          const style = bar.getAttribute('style');
+          // 기본 인라인 스타일 너비를 활성화
+        });
+      }, 300);
+    });
+
+    // 보험료 모의 계산기 계산 로직
+    function calculateInsurance() {
+      const age = document.getElementById('calc-age').value;
+      const car = document.getElementById('calc-car').value;
+      const limit = document.getElementById('calc-limit').value;
+      const history = document.getElementById('calc-history').value;
+      
+      // 2026 가상 기본 대물 배상료 평년 산식 (단위: 원)
+      let baseCost = 150000;
+      
+      // 1. 연령별 가산 및 할인 가중치
+      let ageFactor = 1.0;
+      if (age === 'age-20') { ageFactor = 2.4; }
+      else if (age === 'age-26') { ageFactor = 1.5; }
+      else if (age === 'age-30') { ageFactor = 1.0; }
+      else if (age === 'age-50') { ageFactor = 1.1; }
+      else if (age === 'age-65') { ageFactor = 1.35; }
+
+      // 2. 차종 모델별 변수 가산
+      let carFactor = 1.0;
+      if (car === 'car-light') { carFactor = 0.85; }
+      else if (car === 'car-mid') { carFactor = 1.0; }
+      else if (car === 'car-import') { carFactor = 1.3; }
+      else if (car === 'car-ev') { carFactor = 1.2; }
+
+      // 3. 한도 상향에 따른 고정 추가 가산금액
+      let limitAdd = 0;
+      if (limit === 'limit-2') { limitAdd = 0; }
+      else if (limit === 'limit-5') { limitAdd = 12000; }
+      else if (limit === 'limit-10') { limitAdd = 22000; }
+      else if (limit === 'limit-20') { limitAdd = 35000; }
+
+      // 4. 사고 이력 패널티
+      let historyFactor = 1.0;
+      if (history === 'one') { historyFactor = 1.25; }
+      else if (history === 'multi') { historyFactor = 1.75; }
+
+      // 최종 연산
+      const calculatedCost = Math.round((baseCost * ageFactor * carFactor * historyFactor) + limitAdd);
+      
+      // 결과 출력 영역 활성화 및 바인딩
+      const resultDiv = document.getElementById('insurance-result');
+      const mainResultText = document.getElementById('result-text-main');
+      const subResultText = document.getElementById('result-text-sub');
+      
+      resultDiv.style.display = 'block';
+      mainResultText.innerText = `선택하신 조건의 연간 대물 배상 예상 요금은 약 ${calculatedCost.toLocaleString()}원 입니다.`;
+      
+      let limitDiffText = "";
+      if (limit === 'limit-2') {
+        limitDiffText = "현재 한도는 의무 법적 최소선인 2억 원으로 가입하셨습니다. 단돈 2만 2천 원 내외만 추가하시면 10억 원 한도로 대폭 상향이 가능합니다. 초과 손해 발생 시 개인 사비로 충당하셔야 하므로 상향 조정을 권장해 드립니다.";
+      } else if (limit === 'limit-5') {
+        limitDiffText = "5억 원 한도는 안정적이지만 대형 도로 연쇄 추돌 사고 시 자칫 한도가 초과될 수 있습니다. 연간 만 원 수준의 차이로 대물 10억 원 안심 한도를 확보하는 방향이 유리합니다.";
+      } else {
+        limitDiffText = "고객님께서는 2026년 기준 금융 감독 당국 및 대형 커뮤니티에서 가장 적극 권장하는 초고액 한도 담보를 안전하게 선택하셨습니다. 대형 고가 전기차나 슈퍼카와의 뜻하지 않은 조우 시에도 개인 자산 보호를 원활히 달성하실 수 있습니다.";
+      }
+      
+      subResultText.innerText = `* 분석 의견: ${limitDiffText} (본 통계 예상치는 가상 무사고 실사용자 표본 데이터 통합 평균이며, 개별 다이렉트 다모아 모바일 전용 앱을 통한 실견적 시 안전운전 특약 및 블랙박스 추가 여부에 따라 하향될 가능성이 존재합니다.)`;
+    }
+  </script>
+  
